@@ -1,0 +1,154 @@
+  
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: rgb(245, 246, 253);
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.container h1 {
+  letter-spacing: 4px;
+  font-size: 50px;
+  margin-bottom: 0;
+}
+
+.container hr {
+  border: solid tan 2px;
+  background-color: tan;
+  width: 100px;
+  height: 8px;
+  margin-top: 15px;  
+}
+
+.buttons {
+  width: 35%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.buttons button {
+  border: tan 2px solid;
+  border-radius: 5px;
+  padding: 3px 8px;
+  font-weight: 600;
+  color: rgb(189, 145, 88);
+  background: white;
+  transition: 0.3s;
+}
+
+.buttons button:hover {
+  background: rgb(189, 145, 88);
+  color: white;
+  border: rgb(189, 145, 88) 2px solid;
+}
+
+.content {
+  margin-top: 40px;
+  width: 85vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.content .box {
+  display: flex;
+  flex-flow: row;
+  margin: 20px;
+  transition: 0.4s;
+}
+
+.box img {
+  width: 280px;
+  border-radius: 5px;
+  border: tan 5px solid;
+  margin-right: 15px;
+}
+
+.intro {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#price {
+  text-align: right;
+  letter-spacing: 2px;
+  color: rgb(189, 145, 88);  
+}
+.details hr {
+  border: solid lightgray 1px;
+  background-color: lightgray;
+  height: 4px;
+  width: 95%;
+  margin-bottom: 25px;
+  margin-top: 8px;
+}
+
+.content .box:hover {
+  color: rgb(204, 126, 25);
+  font-weight: 800;
+}
+
+.container .content .hide {
+  display: none;
+}
+
+.container .content .show {
+  display: flex;
+  transition: 0.5s;
+}
+
+/* for small screen */
+
+@media (max-width: 600px) {
+
+
+  .container .content {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .container {
+    margin: 30px 20px;
+  }
+
+  .intro {
+    display: block;
+  }
+
+  #price {
+    text-align: left;
+    margin-top: 8px;
+  }
+
+  .box img {
+    width: 250px;
+    max-height: 200px;
+  }
+
+  .buttons {
+    width: 85%;
+    justify-content: space-around;
+  }
+
+
+}
